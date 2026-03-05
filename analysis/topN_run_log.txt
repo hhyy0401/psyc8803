@@ -1,0 +1,336 @@
+/Users/hkim3239/miniconda3/lib/python3.12/site-packages/sklearn/utils/_param_validation.py:11: UserWarning: A NumPy version >=1.23.5 and <2.3.0 is required for this version of SciPy (detected version 2.3.1)
+  from scipy.sparse import csr_matrix, issparse
+Common subjects: 184
+
+================================================================================
+TOP-N = 10 FDR-significant features
+  Total: 3 scenarios, 16 targets, 5 models = 80 model runs
+================================================================================
+
+────────────────────────────────────────────────────────────────────────────────
+  [Scenario 1/3] Load / NoLoad mean (top_n=10)
+────────────────────────────────────────────────────────────────────────────────
+
+  Target: Load_a (N=184, 10 features)
+    Features: ['right_temporal_abs_gamma', 'central_abs_gamma', 'right_temporal_rel_gamma', 'central_rel_gamma', 'right_temporal_abs_beta', 'central_abs_beta', 'prefrontal_abs_beta', 'prefrontal_abs_gamma', 'central_abs_delta', 'posterior_rel_theta']
+    [1/20] Ridge
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.1338  MAE=0.3260  perm_p=0.0050**
+    [2/20] Lasso
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.1343  MAE=0.3278  perm_p=0.0050**
+    [3/20] ElasticNet
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.1350  MAE=0.3277  perm_p=0.0050**
+    [4/20] XGBoost
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (16s)
+      => R²=+0.0416  MAE=0.3433  perm_p=0.0100*
+    [5/20] SVR
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0293  MAE=0.3321  perm_p=0.0100*
+
+  Target: Load_v (N=184, 10 features)
+    Features: ['right_temporal_abs_gamma', 'right_temporal_theta_beta_ratio', 'left_temporal_theta_beta_ratio', 'right_temporal_rel_gamma', 'right_temporal_spectral_entropy', 'right_temporal_rel_beta', 'central_theta_beta_ratio', 'central_rel_beta', 'prefrontal_theta_beta_ratio', 'central_abs_gamma']
+    [6/20] Ridge
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0546  MAE=0.6402  perm_p=0.0100*
+    [7/20] Lasso
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0656  MAE=0.6415  perm_p=0.0050**
+    [8/20] ElasticNet
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0658  MAE=0.6417  perm_p=0.0050**
+    [9/20] XGBoost
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm skip (R²<=0)... done (0s)
+      => R²=-0.1160  MAE=0.7033  perm_p=1.0000
+    [10/20] SVR
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm skip (R²<=0)... done (0s)
+      => R²=-0.0013  MAE=0.6453  perm_p=1.0000
+
+  Target: NoLoad_a (N=184, 10 features)
+    Features: ['right_temporal_abs_gamma', 'central_abs_gamma', 'right_temporal_rel_gamma', 'central_rel_gamma', 'right_temporal_abs_beta', 'central_abs_beta', 'prefrontal_abs_beta', 'prefrontal_abs_gamma', 'central_abs_delta', 'posterior_rel_theta']
+    [11/20] Ridge
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.1364  MAE=0.2264  perm_p=0.0050**
+    [12/20] Lasso
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.1346  MAE=0.2284  perm_p=0.0050**
+    [13/20] ElasticNet
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.1375  MAE=0.2285  perm_p=0.0050**
+    [14/20] XGBoost
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (16s)
+      => R²=+0.1093  MAE=0.2291  perm_p=0.0050**
+    [15/20] SVR
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (2s)
+      => R²=+0.0632  MAE=0.2321  perm_p=0.0050**
+
+  Target: NoLoad_v (N=184, 10 features)
+    Features: ['right_temporal_abs_gamma', 'right_temporal_theta_beta_ratio', 'left_temporal_theta_beta_ratio', 'right_temporal_rel_gamma', 'right_temporal_spectral_entropy', 'right_temporal_rel_beta', 'central_theta_beta_ratio', 'central_rel_beta', 'prefrontal_theta_beta_ratio', 'central_abs_gamma']
+    [16/20] Ridge
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0636  MAE=0.6838  perm_p=0.0050**
+    [17/20] Lasso
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0689  MAE=0.6823  perm_p=0.0050**
+    [18/20] ElasticNet
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0689  MAE=0.6828  perm_p=0.0050**
+    [19/20] XGBoost
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm skip (R²<=0)... done (0s)
+      => R²=-0.0561  MAE=0.7415  perm_p=1.0000
+    [20/20] SVR
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0215  MAE=0.7006  perm_p=0.0199*
+
+────────────────────────────────────────────────────────────────────────────────
+  [Scenario 2/3] Condition-paired mean (top_n=10)
+────────────────────────────────────────────────────────────────────────────────
+
+  Target: Accuracy_Max_a (N=184, 10 features)
+    Features: ['right_temporal_abs_gamma', 'central_abs_gamma', 'right_temporal_rel_gamma', 'central_rel_gamma', 'right_temporal_abs_beta', 'central_abs_beta', 'prefrontal_abs_beta', 'prefrontal_abs_gamma', 'central_abs_delta', 'posterior_rel_theta']
+    [1/50] Ridge
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.1431  MAE=0.3053  perm_p=0.0050**
+    [2/50] Lasso
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.1482  MAE=0.3053  perm_p=0.0050**
+    [3/50] ElasticNet
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.1487  MAE=0.3053  perm_p=0.0050**
+    [4/50] XGBoost
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (16s)
+      => R²=+0.0066  MAE=0.3327  perm_p=0.0348*
+    [5/50] SVR
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0199  MAE=0.3238  perm_p=0.0100*
+
+  Target: Accuracy_Max_v (N=184, 10 features)
+    Features: ['right_temporal_abs_gamma', 'right_temporal_theta_beta_ratio', 'left_temporal_theta_beta_ratio', 'right_temporal_rel_gamma', 'right_temporal_spectral_entropy', 'right_temporal_rel_beta', 'central_theta_beta_ratio', 'central_rel_beta', 'prefrontal_theta_beta_ratio', 'central_abs_gamma']
+    [6/50] Ridge
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0707  MAE=0.6980  perm_p=0.0050**
+    [7/50] Lasso
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0665  MAE=0.7092  perm_p=0.0050**
+    [8/50] ElasticNet
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0698  MAE=0.7083  perm_p=0.0050**
+    [9/50] XGBoost
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm skip (R²<=0)... done (0s)
+      => R²=-0.0451  MAE=0.7509  perm_p=1.0000
+    [10/50] SVR
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm skip (R²<=0)... done (0s)
+      => R²=-0.0118  MAE=0.7269  perm_p=1.0000
+
+  Target: Accuracy_Mid_a (N=184, 10 features)
+    Features: ['right_temporal_abs_gamma', 'central_abs_gamma', 'right_temporal_rel_gamma', 'central_rel_gamma', 'right_temporal_abs_beta', 'central_abs_beta', 'prefrontal_abs_beta', 'prefrontal_abs_gamma', 'central_abs_delta', 'posterior_rel_theta']
+    [11/50] Ridge
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0639  MAE=0.3340  perm_p=0.0050**
+    [12/50] Lasso
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0700  MAE=0.3350  perm_p=0.0050**
+    [13/50] ElasticNet
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0722  MAE=0.3344  perm_p=0.0050**
+    [14/50] XGBoost
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (16s)
+      => R²=+0.0431  MAE=0.3454  perm_p=0.0050**
+    [15/50] SVR
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0135  MAE=0.3354  perm_p=0.0050**
+
+  Target: Accuracy_Mid_v (N=184, 10 features)
+    Features: ['right_temporal_abs_gamma', 'right_temporal_theta_beta_ratio', 'left_temporal_theta_beta_ratio', 'right_temporal_rel_gamma', 'right_temporal_spectral_entropy', 'right_temporal_rel_beta', 'central_theta_beta_ratio', 'central_rel_beta', 'prefrontal_theta_beta_ratio', 'central_abs_gamma']
+    [16/50] Ridge
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0268  MAE=0.8067  perm_p=0.0100*
+    [17/50] Lasso
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0288  MAE=0.8069  perm_p=0.0100*
+    [18/50] ElasticNet
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0306  MAE=0.8056  perm_p=0.0100*
+    [19/50] XGBoost
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm skip (R²<=0)... done (0s)
+      => R²=-0.1740  MAE=0.8689  perm_p=1.0000
+    [20/50] SVR
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm skip (R²<=0)... done (0s)
+      => R²=-0.0192  MAE=0.8211  perm_p=1.0000
+
+  Target: Neutral_a (N=184, 10 features)
+    Features: ['right_temporal_abs_gamma', 'central_abs_gamma', 'right_temporal_rel_gamma', 'central_rel_gamma', 'right_temporal_abs_beta', 'central_abs_beta', 'prefrontal_abs_beta', 'prefrontal_abs_gamma', 'central_abs_delta', 'posterior_rel_theta']
+    [21/50] Ridge
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.1541  MAE=0.2779  perm_p=0.0050**
+    [22/50] Lasso
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.1361  MAE=0.2794  perm_p=0.0050**
+    [23/50] ElasticNet
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.1367  MAE=0.2795  perm_p=0.0050**
+    [24/50] XGBoost
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (16s)
+      => R²=+0.0264  MAE=0.3013  perm_p=0.0149*
+    [25/50] SVR
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0482  MAE=0.2849  perm_p=0.0050**
+
+  Target: Neutral_v (N=184, 10 features)
+    Features: ['right_temporal_abs_gamma', 'right_temporal_theta_beta_ratio', 'left_temporal_theta_beta_ratio', 'right_temporal_rel_gamma', 'right_temporal_spectral_entropy', 'right_temporal_rel_beta', 'central_theta_beta_ratio', 'central_rel_beta', 'prefrontal_theta_beta_ratio', 'central_abs_gamma']
+    [26/50] Ridge
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0248  MAE=0.6833  perm_p=0.0050**
+    [27/50] Lasso
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0124  MAE=0.6913  perm_p=0.0100*
+    [28/50] ElasticNet
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0262  MAE=0.6865  perm_p=0.0050**
+    [29/50] XGBoost
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm skip (R²<=0)... done (0s)
+      => R²=-0.0031  MAE=0.6980  perm_p=1.0000
+    [30/50] SVR
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (2s)
+      => R²=+0.0182  MAE=0.6772  perm_p=0.0199*
+
+  Target: Speed_Max_a (N=184, 10 features)
+    Features: ['right_temporal_abs_gamma', 'central_abs_gamma', 'right_temporal_rel_gamma', 'central_rel_gamma', 'right_temporal_abs_beta', 'central_abs_beta', 'prefrontal_abs_beta', 'prefrontal_abs_gamma', 'central_abs_delta', 'posterior_rel_theta']
+    [31/50] Ridge
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.1087  MAE=0.3343  perm_p=0.0050**
+    [32/50] Lasso
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0964  MAE=0.3424  perm_p=0.0050**
+    [33/50] ElasticNet
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0986  MAE=0.3415  perm_p=0.0050**
+    [34/50] XGBoost
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (17s)
+      => R²=+0.0267  MAE=0.3547  perm_p=0.0050**
+    [35/50] SVR
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm skip (R²<=0)... done (0s)
+      => R²=-0.0034  MAE=0.3345  perm_p=1.0000
+
+  Target: Speed_Max_v (N=184, 10 features)
+    Features: ['right_temporal_abs_gamma', 'right_temporal_theta_beta_ratio', 'left_temporal_theta_beta_ratio', 'right_temporal_rel_gamma', 'right_temporal_spectral_entropy', 'right_temporal_rel_beta', 'central_theta_beta_ratio', 'central_rel_beta', 'prefrontal_theta_beta_ratio', 'central_abs_gamma']
+    [36/50] Ridge
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0224  MAE=0.8163  perm_p=0.0149*
+    [37/50] Lasso
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0202  MAE=0.8225  perm_p=0.0249*
+    [38/50] ElasticNet
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0291  MAE=0.8163  perm_p=0.0149*
+    [39/50] XGBoost
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm skip (R²<=0)... done (0s)
+      => R²=-0.1126  MAE=0.8577  perm_p=1.0000
+    [40/50] SVR
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (2s)
+      => R²=+0.0085  MAE=0.8216  perm_p=0.0597
+
+  Target: Speed_Mid_a (N=184, 10 features)
+    Features: ['right_temporal_abs_gamma', 'central_abs_gamma', 'right_temporal_rel_gamma', 'central_rel_gamma', 'right_temporal_abs_beta', 'central_abs_beta', 'prefrontal_abs_beta', 'prefrontal_abs_gamma', 'central_abs_delta', 'posterior_rel_theta']
+    [41/50] Ridge
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0618  MAE=0.3006  perm_p=0.0050**
+    [42/50] Lasso
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0554  MAE=0.3068  perm_p=0.0100*
+    [43/50] ElasticNet
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0624  MAE=0.3053  perm_p=0.0050**
+    [44/50] XGBoost
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm skip (R²<=0)... done (0s)
+      => R²=-0.0203  MAE=0.3128  perm_p=1.0000
+    [45/50] SVR
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm skip (R²<=0)... done (0s)
+      => R²=-0.0080  MAE=0.3038  perm_p=1.0000
+
+  Target: Speed_Mid_v (N=184, 10 features)
+    Features: ['right_temporal_abs_gamma', 'right_temporal_theta_beta_ratio', 'left_temporal_theta_beta_ratio', 'right_temporal_rel_gamma', 'right_temporal_spectral_entropy', 'right_temporal_rel_beta', 'central_theta_beta_ratio', 'central_rel_beta', 'prefrontal_theta_beta_ratio', 'central_abs_gamma']
+    [46/50] Ridge
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0555  MAE=0.7760  perm_p=0.0100*
+    [47/50] Lasso
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0416  MAE=0.7913  perm_p=0.0100*
+    [48/50] ElasticNet
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0484  MAE=0.7857  perm_p=0.0100*
+    [49/50] XGBoost
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm skip (R²<=0)... done (0s)
+      => R²=-0.0503  MAE=0.8254  perm_p=1.0000
+    [50/50] SVR
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0126  MAE=0.7933  perm_p=0.0448*
+
+────────────────────────────────────────────────────────────────────────────────
+  [Scenario 3/3] Grand mean (top_n=10)
+────────────────────────────────────────────────────────────────────────────────
+
+  Target: a (N=184, 10 features)
+    Features: ['right_temporal_abs_gamma', 'central_abs_gamma', 'right_temporal_rel_gamma', 'central_rel_gamma', 'right_temporal_abs_beta', 'central_abs_beta', 'prefrontal_abs_beta', 'prefrontal_abs_gamma', 'central_abs_delta', 'posterior_rel_theta']
+    [1/10] Ridge
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.1789  MAE=0.2523  perm_p=0.0050**
+    [2/10] Lasso
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.1722  MAE=0.2540  perm_p=0.0050**
+    [3/10] ElasticNet
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.1719  MAE=0.2541  perm_p=0.0050**
+    [4/10] XGBoost
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (16s)
+      => R²=+0.0777  MAE=0.2671  perm_p=0.0050**
+    [5/10] SVR
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0453  MAE=0.2580  perm_p=0.0050**
+
+  Target: v (N=184, 10 features)
+    Features: ['right_temporal_abs_gamma', 'right_temporal_theta_beta_ratio', 'left_temporal_theta_beta_ratio', 'right_temporal_rel_gamma', 'right_temporal_spectral_entropy', 'right_temporal_rel_beta', 'central_theta_beta_ratio', 'central_rel_beta', 'prefrontal_theta_beta_ratio', 'central_abs_gamma']
+    [6/10] Ridge
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0782  MAE=0.6000  perm_p=0.0050**
+    [7/10] Lasso
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0846  MAE=0.6018  perm_p=0.0050**
+    [8/10] ElasticNet
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm test (200x)... done (1s)
+      => R²=+0.0841  MAE=0.6017  perm_p=0.0050**
+    [9/10] XGBoost
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm skip (R²<=0)... done (0s)
+      => R²=-0.0483  MAE=0.6528  perm_p=1.0000
+    [10/10] SVR
+      [1/3] tuning... [2/3] 10-fold CV... [3/3] perm skip (R²<=0)... done (0s)
+      => R²=-0.0005  MAE=0.6206  perm_p=1.0000
+
+  top_n=10 completed in 167s (2.8min)
+
+Results saved to: /Users/hkim3239/GaTech Dropbox/Hyunju Kim/EEG/DDM_EEG_Regression_TopN_Results.csv
+
+================================================================================
+  SUMMARY: Best model per target (by CV R²)
+================================================================================
+
+  Top_N  Scenario        Target             Model              R²      MAE   Perm_p  N_Feat
+  ─────  ─────────────── ────────────────── ──────────── ──────── ──────── ────────  ──────
+     10  Load/NoLoad     Load_a             ElasticNet    +0.1350   0.3277   0.0050 **      10
+     10  Load/NoLoad     Load_v             ElasticNet    +0.0658   0.6417   0.0050 **      10
+     10  Load/NoLoad     NoLoad_a           ElasticNet    +0.1375   0.2285   0.0050 **      10
+     10  Load/NoLoad     NoLoad_v           Lasso         +0.0689   0.6823   0.0050 **      10
+     10  PairedMean      Accuracy_Max_a     ElasticNet    +0.1487   0.3053   0.0050 **      10
+     10  PairedMean      Accuracy_Max_v     Ridge         +0.0707   0.6980   0.0050 **      10
+     10  PairedMean      Accuracy_Mid_a     ElasticNet    +0.0722   0.3344   0.0050 **      10
+     10  PairedMean      Accuracy_Mid_v     ElasticNet    +0.0306   0.8056   0.0100 *      10
+     10  PairedMean      Neutral_a          Ridge         +0.1541   0.2779   0.0050 **      10
+     10  PairedMean      Neutral_v          ElasticNet    +0.0262   0.6865   0.0050 **      10
+     10  PairedMean      Speed_Max_a        Ridge         +0.1087   0.3343   0.0050 **      10
+     10  PairedMean      Speed_Max_v        ElasticNet    +0.0291   0.8163   0.0149 *      10
+     10  PairedMean      Speed_Mid_a        ElasticNet    +0.0624   0.3053   0.0050 **      10
+     10  PairedMean      Speed_Mid_v        Ridge         +0.0555   0.7760   0.0100 *      10
+     10  GrandMean       a                  Ridge         +0.1789   0.2523   0.0050 **      10
+     10  GrandMean       v                  Lasso         +0.0846   0.6018   0.0050 **      10
+Report saved to: /Users/hkim3239/GaTech Dropbox/Hyunju Kim/EEG/analysis/regression_topN_results.md
