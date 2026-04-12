@@ -1,2 +1,7 @@
 raw/
 raw_clean/
+.DS_Store
+__pycache__/
+.claude/
+.vscode/
+data/all_subjects_raw_psd_long.csv
